@@ -1,1 +1,0 @@
-This directory is the target directory for saving self_trained_models after running "python3 train.py"
