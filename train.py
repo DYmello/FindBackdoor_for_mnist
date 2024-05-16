@@ -12,7 +12,7 @@ num_filters = 32
 lam_bda = 0.05
 
 # 加载本地 MNIST 数据集
-with np.load('/Users/dymello/Neo/MNIST/mnist.npz') as data:
+with np.load('./MNIST/mnist.npz') as data:
     x_train, y_train = data['x_train'], data['y_train']
     x_test, y_test = data['x_test'], data['y_test']
 
