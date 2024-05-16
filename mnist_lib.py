@@ -33,7 +33,7 @@ def create_model():
 print("Initilizing models from pretrained models")
 
 model = create_model()
-PRETRAINED_DIR = "/Users/dymello/Neo/MNIST/pre_trained_models/"
+PRETRAINED_DIR = "./MNIST/pre_trained_models/"
 
 model.load_weights(PRETRAINED_DIR + "normal.h5py")
 
@@ -56,7 +56,7 @@ models = dict(normal = model,
               p3 = model3)
 
 def before():
-    with np.load('/Users/dymello/Neo/MNIST/mnist.npz') as data:
+    with np.load('./MNIST/mnist.npz') as data:
         x_train, y_train = data['x_train'], data['y_train']
         x_test, y_test = data['x_test'], data['y_test']
     x_train = x_train.reshape(-1, 28, 28, 1)
