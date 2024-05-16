@@ -5,7 +5,7 @@ from mnist_lib import *
 
 # 修改后的 before() 函数，从本地文件加载数据
 def before():
-    with np.load('/Users/dymello/Neo/MNIST/mnist.npz') as data:
+    with np.load('./MNIST/mnist.npz') as data:
         x_train, y_train = data['x_train'], data['y_train']
         x_test, y_test = data['x_test'], data['y_test']
     return (x_train, y_train), (x_test, y_test)
